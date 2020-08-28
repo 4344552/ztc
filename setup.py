@@ -15,9 +15,9 @@ setup(
       author = 'Vladimir Rusinov',
       author_email = 'vladimir@greenmice.info',
       url = 'https://bitbucket.org/rvs/ztc/wiki/Home',
-      
+
       home = '/opt/ztc/',
-      
+
       package_dir = {'': 'src'},
       packages = [
           'ztc', 'ztc.lib',
@@ -28,14 +28,14 @@ setup(
           'ztc.mongo',
           'ztc.ldap'
           ],
-      
+
       scripts = glob.glob('src/*.py'),
-      
+
       data_files=[
             ('/etc/zabbix-agent.d/', glob.glob('./conf/zabbix-agent.d/*.conf') + glob.glob('./conf/zabbix-agent.d/*.ini')),
             ('/etc/ztc',  glob.glob('./conf/etc/*.conf')),
             ('/opt/ztc/templates', glob.glob('templates/*.xml')),
-            ('/opt/ztc/doc/', ('README', 'REQUIREMENTS')),
+            ('/opt/ztc/doc/', ('README.md', 'REQUIREMENTS')),
             ('/opt/ztc/lib/', glob.glob('lib/*.jar')),
             ('/opt/ztc/contrib/2gis/bin/', glob.glob('contrib/2gis/bin/*')),
             ('/opt/ztc/contrib/2gis/conf/zabbix-agent.d/', glob.glob('contrib/2gis/conf/zabbix-agent.d/*')),
